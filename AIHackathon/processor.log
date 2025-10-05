@@ -1,0 +1,267 @@
+2025-10-04 21:38:39,790 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-04 21:38:39,791 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-04 21:38:39,798 - INFO -  * Restarting with stat
+2025-10-04 21:38:40,439 - WARNING -  * Debugger is active!
+2025-10-04 21:38:40,440 - INFO -  * Debugger PIN: 949-111-869
+2025-10-04 21:38:55,050 - INFO - 127.0.0.1 - - [04/Oct/2025 21:38:55] "GET / HTTP/1.1" 200 -
+2025-10-04 21:38:55,101 - INFO - 127.0.0.1 - - [04/Oct/2025 21:38:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-04 21:38:58,446 - INFO - 127.0.0.1 - - [04/Oct/2025 21:38:58] "GET / HTTP/1.1" 200 -
+2025-10-04 21:38:58,747 - INFO - 127.0.0.1 - - [04/Oct/2025 21:38:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-04 21:39:04,368 - INFO - Successfully processed file: gg.pdf, output: processed_output_20251004_213904.json
+2025-10-04 21:39:04,368 - INFO - 127.0.0.1 - - [04/Oct/2025 21:39:04] "POST /upload HTTP/1.1" 200 -
+2025-10-04 21:39:20,720 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-04 21:39:20,720 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-04 21:39:20,722 - INFO -  * Restarting with stat
+2025-10-04 21:39:21,399 - WARNING -  * Debugger is active!
+2025-10-04 21:39:21,402 - INFO -  * Debugger PIN: 949-111-869
+2025-10-04 21:39:21,547 - INFO - 127.0.0.1 - - [04/Oct/2025 21:39:21] "GET / HTTP/1.1" 200 -
+2025-10-04 21:39:21,595 - INFO - 127.0.0.1 - - [04/Oct/2025 21:39:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-04 21:39:42,209 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-04 21:39:42,210 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-04 21:39:42,217 - INFO -  * Restarting with stat
+2025-10-04 21:39:42,887 - WARNING -  * Debugger is active!
+2025-10-04 21:39:42,889 - INFO -  * Debugger PIN: 958-154-445
+2025-10-04 21:39:42,932 - INFO - 127.0.0.1 - - [04/Oct/2025 21:39:42] "GET / HTTP/1.1" 200 -
+2025-10-04 21:39:42,986 - INFO - 127.0.0.1 - - [04/Oct/2025 21:39:42] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-10-04 21:43:58,956 - INFO -  * Detected change in 'c:\\Users\\braaa\\OneDrive\\Documents\\python\\document_processor.py', reloading
+2025-10-04 21:43:59,171 - INFO -  * Restarting with stat
+2025-10-04 21:44:00,029 - WARNING -  * Debugger is active!
+2025-10-04 21:44:00,044 - INFO -  * Debugger PIN: 958-154-445
+2025-10-04 21:44:13,522 - INFO -  * Detected change in 'c:\\Users\\braaa\\OneDrive\\Documents\\python\\document_processor.py', reloading
+2025-10-04 21:44:13,656 - INFO -  * Restarting with stat
+2025-10-04 21:44:14,513 - WARNING -  * Debugger is active!
+2025-10-04 21:44:14,513 - INFO -  * Debugger PIN: 958-154-445
+2025-10-04 21:44:59,332 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-04 21:44:59,332 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-04 21:44:59,332 - INFO -  * Restarting with stat
+2025-10-04 21:45:00,043 - WARNING -  * Debugger is active!
+2025-10-04 21:45:00,046 - INFO -  * Debugger PIN: 958-154-445
+2025-10-04 21:45:01,871 - INFO - 127.0.0.1 - - [04/Oct/2025 21:45:01] "GET / HTTP/1.1" 200 -
+2025-10-04 21:45:01,921 - INFO - 127.0.0.1 - - [04/Oct/2025 21:45:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-04 21:45:06,146 - INFO - Successfully processed file: gg.pdf, output: processed_output_20251004_214506.json
+2025-10-04 21:45:06,146 - INFO - 127.0.0.1 - - [04/Oct/2025 21:45:06] "POST /upload HTTP/1.1" 200 -
+2025-10-04 21:45:54,205 - INFO - Successfully processed file: Invoice_No.pdf, output: processed_output_20251004_214554.json
+2025-10-04 21:45:54,205 - INFO - 127.0.0.1 - - [04/Oct/2025 21:45:54] "POST /upload HTTP/1.1" 200 -
+2025-10-04 21:46:20,515 - INFO -  * Detected change in 'c:\\Users\\braaa\\OneDrive\\Documents\\python\\app.py', reloading
+2025-10-04 21:46:20,615 - INFO -  * Restarting with stat
+2025-10-04 21:46:21,348 - WARNING -  * Debugger is active!
+2025-10-04 21:46:21,350 - INFO -  * Debugger PIN: 958-154-445
+2025-10-05 00:39:34,117 - INFO -  * Detected change in 'c:\\Users\\braaa\\OneDrive\\Documents\\python\\document_processor.py', reloading
+2025-10-05 00:39:34,502 - INFO -  * Restarting with stat
+2025-10-05 00:40:53,969 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-05 00:40:53,969 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-05 00:40:53,978 - INFO -  * Restarting with stat
+2025-10-05 00:40:54,696 - WARNING -  * Debugger is active!
+2025-10-05 00:40:54,702 - INFO -  * Debugger PIN: 958-154-445
+2025-10-05 00:40:57,428 - INFO - 127.0.0.1 - - [05/Oct/2025 00:40:57] "GET / HTTP/1.1" 200 -
+2025-10-05 00:40:57,494 - INFO - 127.0.0.1 - - [05/Oct/2025 00:40:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-05 00:41:02,954 - INFO - Successfully processed file: gg.pdf, output: processed_output_20251005_004102.json
+2025-10-05 00:41:02,957 - INFO - 127.0.0.1 - - [05/Oct/2025 00:41:02] "POST /upload HTTP/1.1" 200 -
+2025-10-05 00:41:42,591 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-05 00:41:42,591 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-05 00:41:42,592 - INFO -  * Restarting with stat
+2025-10-05 00:41:43,298 - WARNING -  * Debugger is active!
+2025-10-05 00:41:43,300 - INFO -  * Debugger PIN: 958-154-445
+2025-10-05 00:41:45,557 - INFO - 127.0.0.1 - - [05/Oct/2025 00:41:45] "GET / HTTP/1.1" 200 -
+2025-10-05 00:41:45,596 - INFO - 127.0.0.1 - - [05/Oct/2025 00:41:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-05 00:41:46,487 - INFO - 127.0.0.1 - - [05/Oct/2025 00:41:46] "GET / HTTP/1.1" 200 -
+2025-10-05 00:41:46,791 - INFO - 127.0.0.1 - - [05/Oct/2025 00:41:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-05 00:41:47,952 - INFO - 127.0.0.1 - - [05/Oct/2025 00:41:47] "GET / HTTP/1.1" 200 -
+2025-10-05 00:41:47,990 - INFO - 127.0.0.1 - - [05/Oct/2025 00:41:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-05 00:41:51,218 - INFO - Successfully processed file: gg.pdf, output: processed_output_20251005_004151.json
+2025-10-05 00:41:51,220 - INFO - 127.0.0.1 - - [05/Oct/2025 00:41:51] "POST /upload HTTP/1.1" 200 -
+2025-10-05 00:43:06,450 - INFO -  * Detected change in 'c:\\Users\\braaa\\OneDrive\\Documents\\python\\document_processor.py', reloading
+2025-10-05 00:43:06,535 - INFO -  * Restarting with stat
+2025-10-05 00:43:07,450 - WARNING -  * Debugger is active!
+2025-10-05 00:43:07,452 - INFO -  * Debugger PIN: 958-154-445
+2025-10-05 00:52:37,407 - INFO -  * Detected change in 'c:\\Users\\braaa\\OneDrive\\Documents\\python\\document_processor.py', reloading
+2025-10-05 00:52:37,852 - INFO -  * Restarting with stat
+2025-10-05 00:52:39,342 - WARNING -  * Debugger is active!
+2025-10-05 00:52:39,346 - INFO -  * Debugger PIN: 958-154-445
+2025-10-05 00:54:33,973 - INFO - 127.0.0.1 - - [05/Oct/2025 00:54:33] "GET / HTTP/1.1" 200 -
+2025-10-05 00:54:34,048 - INFO - 127.0.0.1 - - [05/Oct/2025 00:54:34] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-05 00:54:36,721 - INFO - 127.0.0.1 - - [05/Oct/2025 00:54:36] "GET / HTTP/1.1" 200 -
+2025-10-05 00:54:37,027 - INFO - 127.0.0.1 - - [05/Oct/2025 00:54:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-05 00:54:53,142 - INFO - 127.0.0.1 - - [05/Oct/2025 00:54:53] "GET / HTTP/1.1" 200 -
+2025-10-05 00:54:53,179 - INFO - 127.0.0.1 - - [05/Oct/2025 00:54:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-05 00:57:35,803 - INFO -  * Detected change in 'c:\\Users\\braaa\\OneDrive\\Documents\\python\\test.py', reloading
+2025-10-05 00:57:35,984 - INFO -  * Restarting with stat
+2025-10-05 00:57:37,157 - WARNING -  * Debugger is active!
+2025-10-05 00:57:37,160 - INFO -  * Debugger PIN: 958-154-445
+2025-10-05 00:58:19,009 - INFO - 127.0.0.1 - - [05/Oct/2025 00:58:19] "GET / HTTP/1.1" 200 -
+2025-10-05 00:58:19,045 - INFO - 127.0.0.1 - - [05/Oct/2025 00:58:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-05 00:58:20,696 - INFO - 127.0.0.1 - - [05/Oct/2025 00:58:20] "GET / HTTP/1.1" 200 -
+2025-10-05 00:58:20,999 - INFO - 127.0.0.1 - - [05/Oct/2025 00:58:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-05 00:58:23,671 - INFO - 127.0.0.1 - - [05/Oct/2025 00:58:23] "GET / HTTP/1.1" 200 -
+2025-10-05 00:58:23,705 - INFO - 127.0.0.1 - - [05/Oct/2025 00:58:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-05 00:58:24,360 - INFO - 127.0.0.1 - - [05/Oct/2025 00:58:24] "GET / HTTP/1.1" 200 -
+2025-10-05 00:58:24,659 - INFO - 127.0.0.1 - - [05/Oct/2025 00:58:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-05 01:00:33,598 - INFO -  * Detected change in 'c:\\Users\\braaa\\OneDrive\\Documents\\python\\test.py', reloading
+2025-10-05 01:00:33,706 - INFO -  * Restarting with stat
+2025-10-05 01:00:34,459 - WARNING -  * Debugger is active!
+2025-10-05 01:00:34,462 - INFO -  * Debugger PIN: 958-154-445
+2025-10-05 01:00:50,086 - INFO -  * Detected change in 'c:\\Users\\braaa\\OneDrive\\Documents\\python\\test.py', reloading
+2025-10-05 01:00:50,223 - INFO -  * Restarting with stat
+2025-10-05 01:00:50,953 - WARNING -  * Debugger is active!
+2025-10-05 01:00:50,955 - INFO -  * Debugger PIN: 958-154-445
+2025-10-05 01:01:36,400 - INFO -  * Detected change in 'c:\\Users\\braaa\\OneDrive\\Documents\\python\\document_processor.py', reloading
+2025-10-05 01:01:36,518 - INFO -  * Restarting with stat
+2025-10-05 01:02:39,284 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-05 01:02:39,284 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-05 01:02:39,285 - INFO -  * Restarting with stat
+2025-10-05 01:02:40,027 - WARNING -  * Debugger is active!
+2025-10-05 01:02:40,027 - INFO -  * Debugger PIN: 958-154-445
+2025-10-05 01:02:42,781 - INFO - 127.0.0.1 - - [05/Oct/2025 01:02:42] "GET / HTTP/1.1" 200 -
+2025-10-05 01:02:42,833 - INFO - 127.0.0.1 - - [05/Oct/2025 01:02:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-05 01:02:44,779 - INFO - 127.0.0.1 - - [05/Oct/2025 01:02:44] "GET / HTTP/1.1" 200 -
+2025-10-05 01:02:45,070 - INFO - 127.0.0.1 - - [05/Oct/2025 01:02:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-10-05 01:03:17,416 - ERROR - Error processing file: Coffe_sales.xlsx, error: Object of type Timestamp is not JSON serializable
+2025-10-05 01:03:17,418 - INFO - 127.0.0.1 - - [05/Oct/2025 01:03:17] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+2025-10-05 01:03:26,699 - INFO - Successfully processed file: Coffe_sales.xlsx, output: processed_output_20251005_010326.csv
+2025-10-05 01:03:26,701 - INFO - 127.0.0.1 - - [05/Oct/2025 01:03:26] "POST /upload HTTP/1.1" 200 -
+2025-10-05 01:05:38,021 - INFO -  * Detected change in 'c:\\Users\\braaa\\OneDrive\\Documents\\python\\test.py', reloading
+2025-10-05 01:05:38,200 - INFO -  * Restarting with stat
+2025-10-05 01:05:39,303 - WARNING -  * Debugger is active!
+2025-10-05 01:05:39,307 - INFO -  * Debugger PIN: 958-154-445
+2025-10-05 07:37:02,450 - ERROR - Error deleting temp file: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\braaa\\AppData\\Local\\Temp\\tmpni6x3e87.pdf'
+2025-10-05 07:37:20,581 - ERROR - Error deleting temp file: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\braaa\\AppData\\Local\\Temp\\tmpoi_q1_ln.pdf'
+2025-10-05 07:43:05,883 - ERROR - Error deleting temp file: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\braaa\\AppData\\Local\\Temp\\tmp8pnqwgfn.pdf'
+2025-10-05 07:43:32,529 - ERROR - Error deleting temp file: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\braaa\\AppData\\Local\\Temp\\tmpddd6xiok.pdf'
+2025-10-05 07:44:26,581 - WARNING - Request error on attempt 1/3: 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2025-10-05 07:44:30,630 - WARNING - Request error on attempt 2/3: 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2025-10-05 07:44:36,696 - WARNING - Request error on attempt 3/3: 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2025-10-05 07:44:44,697 - ERROR - Failed to process text after 3 attempts. Last error: API request error: 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2025-10-05 07:44:44,698 - ERROR - Error deleting temp file: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\braaa\\AppData\\Local\\Temp\\tmphwjw1mvx.json'
+2025-10-05 07:45:31,017 - ERROR - Error processing file Coffe_sales.xlsx: Object of type Timestamp is not JSON serializable
+2025-10-05 07:45:31,017 - ERROR - Error deleting temp file: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\braaa\\AppData\\Local\\Temp\\tmptkk1u2sw.xlsx'
+2025-10-05 07:45:41,366 - ERROR - Error processing file Coffe_sales.xlsx: Object of type Timestamp is not JSON serializable
+2025-10-05 07:45:41,367 - ERROR - Error deleting temp file: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\braaa\\AppData\\Local\\Temp\\tmp1c5kxo2z.xlsx'
+2025-10-05 07:46:43,986 - ERROR - Error deleting temp file: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\braaa\\AppData\\Local\\Temp\\tmpaje3sw8z.pdf'
+2025-10-05 07:53:02,127 - ERROR - Error deleting temp file: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\braaa\\AppData\\Local\\Temp\\tmpthdzo44p.pdf'
+2025-10-05 07:53:58,830 - ERROR - Error deleting temp file: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\braaa\\AppData\\Local\\Temp\\tmp8urnmro9.pdf'
+2025-10-05 07:56:36,634 - ERROR - Error processing file Coffe_sales.xlsx: Object of type Timestamp is not JSON serializable
+2025-10-05 07:56:36,634 - ERROR - Error deleting temp file: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\braaa\\AppData\\Local\\Temp\\tmpfaomahgh.xlsx'
+2025-10-05 08:00:36,505 - ERROR - Error processing file Coffe_sales.xlsx: Object of type Timestamp is not JSON serializable
+2025-10-05 08:00:36,505 - ERROR - Error deleting temp file: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\braaa\\AppData\\Local\\Temp\\tmpfz769bok.xlsx'
+2025-10-05 08:00:46,636 - ERROR - Error processing file Coffe_sales.xlsx: Object of type Timestamp is not JSON serializable
+2025-10-05 08:00:46,636 - ERROR - Error deleting temp file: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\braaa\\AppData\\Local\\Temp\\tmpi25ehvh9.xlsx'
+2025-10-05 08:00:59,315 - ERROR - Error deleting temp file: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\braaa\\AppData\\Local\\Temp\\tmpgk4ffsoi.pdf'
+2025-10-05 08:05:20,688 - ERROR - Error deleting temp file: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\braaa\\AppData\\Local\\Temp\\tmpet2ted7b.pdf'
+2025-10-05 08:06:42,273 - ERROR - Error deleting temp file: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\braaa\\AppData\\Local\\Temp\\tmpfx8y5ytl.pdf'
+2025-10-05 08:57:05,844 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.234.233:5000
+2025-10-05 08:57:05,844 - INFO - [33mPress CTRL+C to quit[0m
+2025-10-05 08:57:05,854 - INFO -  * Restarting with stat
+2025-10-05 08:57:06,513 - WARNING -  * Debugger is active!
+2025-10-05 08:57:06,515 - INFO -  * Debugger PIN: 958-154-445
+2025-10-05 08:57:30,694 - INFO - 127.0.0.1 - - [05/Oct/2025 08:57:30] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-10-05 08:57:30,797 - INFO - 127.0.0.1 - - [05/Oct/2025 08:57:30] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-10-05 08:57:30,826 - INFO - 127.0.0.1 - - [05/Oct/2025 08:57:30] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-10-05 08:57:30,875 - INFO - 127.0.0.1 - - [05/Oct/2025 08:57:30] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=7qm6tKsEDtjWAYu6yPZT HTTP/1.1" 200 -
+2025-10-05 08:57:30,924 - INFO - 127.0.0.1 - - [05/Oct/2025 08:57:30] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-10-05 09:03:03,376 - ERROR - Error processing file gg.pdf: name 'request' is not defined
+2025-10-05 09:03:03,377 - ERROR - Error deleting temp file: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\braaa\\AppData\\Local\\Temp\\tmpzalw9ox3.pdf'
+2025-10-05 09:04:03,911 - ERROR - Error processing file gg.pdf: name 'request' is not defined
+2025-10-05 09:04:03,912 - ERROR - Error deleting temp file: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\braaa\\AppData\\Local\\Temp\\tmp4wj941cs.pdf'
+2025-10-05 09:04:30,781 - ERROR - Error processing file gg.pdf: name 'request' is not defined
+2025-10-05 09:04:30,781 - ERROR - Error deleting temp file: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\braaa\\AppData\\Local\\Temp\\tmp1gemxqed.pdf'
+2025-10-05 09:04:49,859 - ERROR - Error deleting temp file: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\braaa\\AppData\\Local\\Temp\\tmpvmuskswp.pdf'
+2025-10-05 09:12:19,614 - ERROR - Error deleting temp file: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\braaa\\AppData\\Local\\Temp\\tmpjys2o1x9.pdf'
+2025-10-05 09:13:04,619 - ERROR - Error deleting temp file: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\braaa\\AppData\\Local\\Temp\\tmpzesi00kt.pdf'
+2025-10-05 09:16:15,624 - ERROR - Error deleting temp file: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\braaa\\AppData\\Local\\Temp\\tmpkts8n6bp.pdf'
+2025-10-05 09:22:01,780 - ERROR - Error deleting temp file: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\braaa\\AppData\\Local\\Temp\\tmpw0ewmo6y.pdf'
+2025-10-05 09:22:03,542 - INFO - Sending request to Ollama with 231 characters of text
+2025-10-05 09:22:13,089 - INFO - Successfully parsed 1 key-value pairs from Ollama response
+2025-10-05 09:25:15,804 - ERROR - Error deleting temp file: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\braaa\\AppData\\Local\\Temp\\tmpzz_1rkfy.pdf'
+2025-10-05 09:25:18,627 - INFO - Sending request to Ollama with 231 characters of text
+2025-10-05 09:25:23,912 - INFO - Successfully parsed 8 key-value pairs from Ollama response
+2025-10-05 09:28:41,710 - ERROR - Error deleting temp file: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\braaa\\AppData\\Local\\Temp\\tmpfvc3hyft.pdf'
+2025-10-05 09:28:42,700 - INFO - Sending request to Ollama with 231 characters of text
+2025-10-05 09:28:47,598 - INFO - Successfully parsed 7 key-value pairs from Ollama response
+2025-10-05 09:33:15,473 - ERROR - Error deleting temp file: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\braaa\\AppData\\Local\\Temp\\tmpgaypfh0m.pdf'
+2025-10-05 09:33:17,597 - INFO - Sending request to Ollama with 231 characters of text
+2025-10-05 09:33:22,409 - INFO - Successfully parsed 7 key-value pairs from Ollama response
+2025-10-05 09:38:16,879 - ERROR - Error processing file Coffe_sales.xlsx: Object of type Timestamp is not JSON serializable
+2025-10-05 09:38:16,880 - ERROR - Error deleting temp file: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\braaa\\AppData\\Local\\Temp\\tmpf1f1v6i2.xlsx'
+2025-10-05 09:38:57,260 - ERROR - Error deleting temp file: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\braaa\\AppData\\Local\\Temp\\tmpp0y7hd_i.json'
+2025-10-05 09:39:05,902 - INFO - Sending request to Ollama with 165 characters of text
+2025-10-05 09:39:14,706 - INFO - Successfully parsed 1 key-value pairs from Ollama response
+2025-10-05 09:54:06,128 - ERROR - Error deleting temp file: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\braaa\\AppData\\Local\\Temp\\tmpfby9qt27.pdf'
+2025-10-05 09:54:08,987 - INFO - Sending request to Ollama with 231 characters of text
+2025-10-05 09:54:20,930 - INFO - Successfully parsed 2 key-value pairs from Ollama response
+2025-10-05 09:54:23,361 - INFO - Sending request to Ollama with 231 characters of text
+2025-10-05 09:54:27,513 - INFO - Successfully parsed 6 key-value pairs from Ollama response
+2025-10-05 09:54:30,035 - INFO - Sending request to Ollama with 231 characters of text
+2025-10-05 09:54:35,690 - INFO - Successfully parsed 7 key-value pairs from Ollama response
+2025-10-05 09:54:45,960 - INFO - Sending request to Ollama with 231 characters of text
+2025-10-05 09:54:51,797 - INFO - Successfully parsed 9 key-value pairs from Ollama response
+2025-10-05 09:57:45,457 - ERROR - Error deleting temp file: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\braaa\\AppData\\Local\\Temp\\tmp144jmzuf.pdf'
+2025-10-05 09:57:48,433 - INFO - Sending request to Ollama with 231 characters of text
+2025-10-05 09:57:55,234 - INFO - Successfully parsed 3 key-value pairs from Ollama response
+2025-10-05 09:57:57,386 - INFO - Sending request to Ollama with 231 characters of text
+2025-10-05 09:58:02,018 - INFO - Successfully parsed 7 key-value pairs from Ollama response
+2025-10-05 09:59:01,407 - ERROR - Error deleting temp file: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\braaa\\AppData\\Local\\Temp\\tmp41_q5bvt.pdf'
+2025-10-05 09:59:08,970 - INFO - Sending request to Ollama with 231 characters of text
+2025-10-05 09:59:14,493 - INFO - Successfully parsed 9 key-value pairs from Ollama response
+2025-10-05 10:00:33,207 - ERROR - Error deleting temp file: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\braaa\\AppData\\Local\\Temp\\tmph1ht_f25.pdf'
+2025-10-05 10:00:33,993 - INFO - Sending request to Ollama with 231 characters of text
+2025-10-05 10:00:39,698 - INFO - Successfully parsed 1 key-value pairs from Ollama response
+2025-10-05 10:00:41,578 - INFO - Sending request to Ollama with 231 characters of text
+2025-10-05 10:00:46,454 - INFO - Successfully parsed 10 key-value pairs from Ollama response
+2025-10-05 10:01:09,684 - ERROR - Error processing file gg.pdf: [Errno 2] No such file or directory: 'config_template.yaml'
+2025-10-05 10:01:09,684 - ERROR - Error deleting temp file: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\braaa\\AppData\\Local\\Temp\\tmpr2_mgf12.pdf'
+2025-10-05 10:02:28,519 - ERROR - Error deleting temp file: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\braaa\\AppData\\Local\\Temp\\tmp9dboy4_f.pdf'
+2025-10-05 10:02:36,866 - INFO - Sending request to Ollama with 231 characters of text
+2025-10-05 10:02:41,660 - INFO - Successfully parsed 7 key-value pairs from Ollama response
+2025-10-05 10:12:11,816 - ERROR - Error deleting temp file: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\braaa\\AppData\\Local\\Temp\\tmppdfw8qle.docx'
+2025-10-05 10:12:14,276 - INFO - Sending request to Ollama with 214 characters of text
+2025-10-05 10:12:24,156 - INFO - Successfully parsed 7 key-value pairs from Ollama response
+2025-10-05 10:48:54,768 - ERROR - Error deleting temp file: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\braaa\\AppData\\Local\\Temp\\tmpd0d0sfcq.docx'
+2025-10-05 11:07:50,134 - ERROR - Error deleting temp file: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\braaa\\AppData\\Local\\Temp\\tmphwfce9eg.docx'
+2025-10-05 11:07:52,140 - INFO - Sending request to Ollama with 214 characters of text
+2025-10-05 11:08:06,281 - INFO - Successfully parsed 8 key-value pairs from Ollama response
+2025-10-05 11:25:25,991 - ERROR - Error deleting temp file: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\braaa\\AppData\\Local\\Temp\\tmpthcf55xp.docx'
+2025-10-05 11:25:30,615 - INFO - Sending request to Ollama with 214 characters of text
+2025-10-05 11:25:40,838 - INFO - Successfully parsed 6 key-value pairs from Ollama response
+2025-10-05 11:27:39,113 - ERROR - Error deleting temp file: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\braaa\\AppData\\Local\\Temp\\tmpkveg_o6t.docx'
+2025-10-05 11:27:41,806 - INFO - Sending request to Ollama with 214 characters of text
+2025-10-05 11:27:49,292 - INFO - Successfully parsed 2 key-value pairs from Ollama response
+2025-10-05 11:27:51,779 - INFO - Sending request to Ollama with 214 characters of text
+2025-10-05 11:27:58,644 - INFO - Successfully parsed 2 key-value pairs from Ollama response
+2025-10-05 11:27:59,849 - INFO - Sending request to Ollama with 214 characters of text
+2025-10-05 11:28:04,296 - INFO - Successfully parsed 7 key-value pairs from Ollama response
+2025-10-05 11:48:00,265 - ERROR - Error deleting temp file: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\braaa\\AppData\\Local\\Temp\\tmppo_bdyhm.pdf'
+2025-10-05 11:48:03,959 - INFO - Sending request to Ollama with 231 characters of text
+2025-10-05 11:48:12,408 - INFO - Successfully parsed 6 key-value pairs from Ollama response
+2025-10-05 12:11:16,604 - ERROR - Error deleting temp file: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\braaa\\AppData\\Local\\Temp\\tmpuoz880kk.json'
+2025-10-05 12:11:33,504 - ERROR - Error processing file Coffe_sales.xlsx: Object of type Timestamp is not JSON serializable
+2025-10-05 12:11:33,504 - ERROR - Error deleting temp file: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\braaa\\AppData\\Local\\Temp\\tmpswuply72.xlsx'
+2025-10-05 12:11:57,189 - ERROR - Error processing file Coffe_sales.xlsx: Object of type Timestamp is not JSON serializable
+2025-10-05 12:11:57,189 - ERROR - Error deleting temp file: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\braaa\\AppData\\Local\\Temp\\tmpizcqobj_.xlsx'
+2025-10-05 12:12:05,949 - ERROR - Error deleting temp file: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\braaa\\AppData\\Local\\Temp\\tmps8jwvjq3.json'
+2025-10-05 12:12:22,461 - ERROR - Error deleting temp file: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\braaa\\AppData\\Local\\Temp\\tmpsb34j7ba.docx'
+2025-10-05 12:12:30,485 - ERROR - Error deleting temp file: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\braaa\\AppData\\Local\\Temp\\tmp0olnrrip.pdf'
+2025-10-05 12:12:34,673 - INFO - Sending request to Ollama with 448 characters of text
+2025-10-05 12:12:47,978 - INFO - Successfully parsed 9 key-value pairs from Ollama response
+2025-10-05 12:32:01,308 - ERROR - Error deleting temp file: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\braaa\\AppData\\Local\\Temp\\tmpyu2pvp5f.pdf'
+2025-10-05 12:32:05,063 - INFO - Sending request to Ollama with 231 characters of text
+2025-10-05 12:32:13,759 - INFO - Successfully parsed 8 key-value pairs from Ollama response
+2025-10-05 12:45:19,521 - ERROR - Error deleting temp file: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\braaa\\AppData\\Local\\Temp\\tmp_9i75tgp.pdf'
+2025-10-05 12:45:23,642 - INFO - Sending request to Ollama with 231 characters of text
+2025-10-05 12:45:34,509 - INFO - Successfully parsed 2 key-value pairs from Ollama response
+2025-10-05 12:45:36,924 - INFO - Sending request to Ollama with 231 characters of text
+2025-10-05 12:45:43,112 - INFO - Successfully parsed 1 key-value pairs from Ollama response
+2025-10-05 12:45:44,902 - INFO - Sending request to Ollama with 231 characters of text
+2025-10-05 12:45:49,613 - INFO - Successfully parsed 7 key-value pairs from Ollama response
+2025-10-05 13:04:17,707 - ERROR - Error deleting temp file: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\braaa\\AppData\\Local\\Temp\\tmph_8ehmzr.pdf'
+2025-10-05 13:04:19,712 - INFO - Sending request to Ollama with 231 characters of text
+2025-10-05 13:04:29,213 - INFO - Successfully parsed 7 key-value pairs from Ollama response

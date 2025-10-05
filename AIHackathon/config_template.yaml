@@ -1,0 +1,58 @@
+extraction_rules:
+  # Enable processing features
+  features:
+    normalize_dates: true
+    normalize_currency: true
+    redact_pi: true
+
+  # Document type specific configurations
+  pdf:
+    # Define regions or patterns to extract data from PDFs
+    regions:
+      - name: header
+        page: 1
+        coordinates: [0, 0, 612, 100]  # [x1, y1, x2, y2]
+      - name: footer
+        page: -1
+        coordinates: [0, 700, 612, 792]
+
+  excel:
+    # Define sheets and columns to extract
+    sheets:
+      - name: Sheet1
+        columns:
+          - name: Date
+            type: date
+            format: "%Y-%m-%d"
+          - name: Amount
+            type: currency
+            source_currency: USD
+            target_currency: JOD
+
+  # Common validation rules
+  validation:
+    date_fields:
+      - format: "%Y-%m-%d"
+        not_empty: true
+    currency_fields:
+      - decimal_places: 2
+        min_value: 0
+    text_fields:
+      - max_length: 100
+        pattern: "^[A-Za-z0-9\\s\\-_\\.]+$"
+
+  # PI detection and redaction rules
+  redaction:
+    patterns:
+      - type: email
+        regex: "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}"
+      - type: phone
+        regex: "\\+?\\d{1,4}[-.\\s]?\\(?\\d{1,4}\\)?[-.\\s]?\\d{1,4}[-.\\s]?\\d{1,4}"
+      - type: credit_card
+        regex: "\\d{4}[-\\s]?\\d{4}[-\\s]?\\d{4}[-\\s]?\\d{4}"
+
+  # Output configuration
+  output:
+    format: json  # or csv
+    date_format: "%Y-%m-%d"
+    currency_format: "JOD"

@@ -1,0 +1,60 @@
+# Document processor configuration
+
+# Supported file types
+file_types:
+  pdf: ".pdf"
+  word: [".doc", ".docx"]
+  excel: ".xlsx"
+  json: ".json"
+
+# Maximum file size (in bytes)
+max_file_size: 16777216  # 16MB
+
+# Extraction settings
+extraction:
+  detect_tables: true
+  detect_headers: true
+  detect_lists: true
+  
+# Date formats to detect
+date_formats:
+  - "%Y-%m-%d"
+  - "%d/%m/%Y"
+  - "%m/%d/%Y"
+  - "%d-%m-%Y"
+  - "%Y/%m/%d"
+
+# Currency settings
+currency:
+  default: "JOD"
+  conversions:
+    USD: 0.71
+    EUR: 0.77
+    GBP: 0.89
+
+# Redaction patterns
+redaction:
+  patterns:
+    - name: "email"
+      pattern: "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}"
+      replacement: "[EMAIL REDACTED]"
+    - name: "phone"
+      pattern: "\\+?\\d{1,4}?[-.\\s]?\\(?\\d{1,3}?\\)?[-.\\s]?\\d{1,4}[-.\\s]?\\d{1,4}[-.\\s]?\\d{1,9}"
+      replacement: "[PHONE REDACTED]"
+    - name: "credit_card"
+      pattern: "\\d{4}[-\\s]?\\d{4}[-\\s]?\\d{4}[-\\s]?\\d{4}"
+      replacement: "[CREDIT CARD REDACTED]"
+
+# Ollama settings
+ollama:
+  model: "llama2"
+  max_retries: 3
+  timeout: 30
+  base_url: "http://localhost:11434/api/generate"
+  
+# Output settings
+output:
+  formats:
+    - json
+    - csv
+  timestamp_format: "%Y%m%d_%H%M%S"

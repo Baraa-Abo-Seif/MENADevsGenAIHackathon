@@ -1,0 +1,865 @@
+{% extends "base.html" %}
+
+{% block title %}Document Processor{% endblock %}
+
+{% block head %}
+<style>
+    :root {
+        --primary-color: #4CAF50;
+        --primary-hover: #45a049;
+        --error-color: #f44336;
+        --warning-color: #ff9800;
+        --success-color: #4CAF50;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f5f5f5;
+    }
+
+    .container {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        color: #333;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .upload-form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .drop-zone {
+        border: 2px dashed #ccc;
+        padding: 40px;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        box-sizing: border-box;
+        transition: all 0.3s ease;
+        position: relative;
+    }
+
+    .drop-zone.drag-over {
+        border-color: var(--primary-color);
+        background-color: rgba(76, 175, 80, 0.1);
+    }
+
+    .drop-zone input[type="file"] {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .drop-zone-content {
+        pointer-events: none;
+    }
+
+    .drop-zone-icon {
+        font-size: 48px;
+        color: #666;
+        margin-bottom: 10px;
+    }
+
+    .submit-button {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 12px 30px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+        width: 200px;
+    }
+
+    .submit-button:hover {
+        background-color: var(--primary-hover);
+    }
+
+    .submit-button:disabled {
+        background-color: #cccccc;
+        cursor: not-allowed;
+    }
+
+    .progress-container {
+        display: none;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .progress-bar {
+        width: 100%;
+        height: 20px;
+        background-color: #f0f0f0;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .progress-fill {
+        width: 0%;
+        height: 100%;
+        background-color: var(--primary-color);
+        transition: width 0.3s ease;
+    }
+
+    .progress-text {
+        text-align: center;
+        margin-top: 10px;
+        color: #666;
+    }
+
+    .format-selection {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .format-options {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .format-option {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding: 12px 20px;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        background-color: white;
+    }
+
+    .format-option:hover {
+        border-color: var(--primary-color);
+        background-color: rgba(76, 175, 80, 0.05);
+    }
+
+    .format-option.selected {
+        border-color: var(--primary-color);
+        background-color: rgba(76, 175, 80, 0.1);
+    }
+
+    .format-info {
+        color: #666;
+        font-size: 0.9em;
+        margin-left: 5px;
+    }
+
+    .supported-formats {
+        margin-top: 30px;
+        padding: 15px;
+        background-color: #f8f9fa;
+        border-radius: 8px;
+    }
+
+    .supported-formats h3 {
+        margin-top: 0;
+        color: #333;
+    }
+
+    .supported-formats ul {
+        list-style: none;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 10px;
+    }
+
+    .supported-formats li {
+        padding: 10px;
+        background-color: white;
+        border-radius: 4px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .format-icon {
+        width: 24px;
+        height: 24px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f0f0f0;
+        border-radius: 4px;
+        font-size: 12px;
+    }
+
+    .alert {
+        padding: 12px 20px;
+        margin: 10px 0;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .alert.error {
+        background-color: #ffebee;
+        color: var(--error-color);
+        border: 1px solid #ffcdd2;
+    }
+
+    .alert.success {
+        background-color: #e8f5e9;
+        color: var(--success-color);
+        border: 1px solid #c8e6c9;
+    }
+
+    .alert.info {
+        background-color: #e3f2fd;
+        color: #1976d2;
+        border: 1px solid #bbdefb;
+    }
+
+    .alert-icon {
+        font-size: 20px;
+    }
+
+    .data-section {
+        margin-top: 20px;
+        display: none;
+    }
+
+    .button-group {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .action-button {
+        background-color: #2196F3;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background-color 0.3s ease;
+    }
+
+    .action-button:hover {
+        background-color: #1976D2;
+    }
+
+    .action-button:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+    }
+
+    .data-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    .data-table th,
+    .data-table td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .data-table th {
+        background-color: #f5f5f5;
+        font-weight: bold;
+    }
+
+    .data-table tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+    .data-table tr:hover {
+        background-color: #f0f0f0;
+    }
+
+    .extracted-text {
+        max-height: 300px;
+        overflow-y: auto;
+        padding: 15px;
+        background-color: #f5f5f5;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+        white-space: pre-wrap;
+        font-family: monospace;
+        margin-top: 20px;
+    }
+
+    .spinner {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: 3px solid rgba(255,255,255,.3);
+        border-radius: 50%;
+        border-top-color: #fff;
+        animation: spin 1s linear infinite;
+        margin-right: 10px;
+    }
+    
+    .status-message {
+        margin: 20px 0;
+        padding: 12px 20px;
+        border-radius: 4px;
+        text-align: center;
+        font-weight: bold;
+    }
+    
+    .status-message.info {
+        background-color: #e3f2fd;
+        color: #1976d2;
+        border: 1px solid #bbdefb;
+    }
+    
+    .status-message.error {
+        background-color: #ffebee;
+        color: #d32f2f;
+        border: 1px solid #ffcdd2;
+    }
+    
+    .status-message.success {
+        background-color: #e8f5e9;
+        color: #388e3c;
+        border: 1px solid #c8e6c9;
+    }
+
+    @keyframes spin {
+        to { transform: rotate(360deg); }
+    }
+
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+    }
+
+    .processing {
+        animation: pulse 2s infinite;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Document Processor</h1>
+
+    <div id="alerts"></div>
+
+    <form id="uploadForm" class="upload-form" action="/upload" method="post" enctype="multipart/form-data">
+        <div id="dropZone" class="drop-zone">
+            <div class="drop-zone-content">
+                <div class="drop-zone-icon">📄</div>
+                <p id="fileStatus">Drag and drop a file here or click to select</p>
+                <p class="file-info" id="fileInfo" style="display: none;"></p>
+            </div>
+            <input type="file" name="file" id="fileInput" accept=".pdf,.doc,.docx,.xlsx,.xls,.json" required>
+        </div>
+
+        <div class="format-selection">
+            <p>Select output format:</p>
+            <div class="format-options">
+                <label class="format-option selected">
+                    <input type="radio" name="output_format" value="json" checked>
+                    </span>
+                    JSON
+                    <span class="format-info"></span>
+                </label>
+                <label class="format-option">
+                    <input type="radio" name="output_format" value="csv">
+                    </span>
+                    CSV
+                    <span class="format-info"></span>
+                </label>
+            </div>
+        </div>
+
+        <div class="button-group">
+            <button type="submit" id="submitButton" class="submit-button" disabled>
+                Process Document
+            </button>
+            <button type="button" id="showDataButton" class="action-button" disabled>
+                Show Extracted Data
+            </button>
+            <button type="button" id="showSummaryButton" class="action-button" disabled>
+                Show Ollama Summary
+            </button>
+            <button type="button" id="downloadButton" class="action-button" disabled>
+                Download Results
+            </button>
+        </div>
+        <div id="statusMessage" class="status-message" style="display: none;"></div>
+
+        <div id="progressContainer" class="progress-container">
+            <div class="progress-bar">
+                <div id="progressBar" class="progress-fill"></div>
+            </div>
+            <p id="progressText" class="progress-text">Preparing file...</p>
+        </div>
+    </form>
+
+    <div id="extractedDataSection" class="data-section">
+        <h3>Extracted Data</h3>
+        <div id="dataTable"></div>
+    </div>
+
+    <div id="extractedTextSection" class="data-section">
+        <h3>Extracted Text</h3>
+        <div id="extractedText" class="extracted-text"></div>
+    </div>
+
+    <div id="ollamaSummarySection" class="data-section">
+        <h3>Ollama Summary</h3>
+        <div id="summaryTable"></div>
+    </div>
+
+    <div class="supported-formats">
+        <h3>Supported File Formats:</h3>
+        <ul>
+            <li></span>PDF Documents (.pdf)</li>
+            <li></span>JSON Files (.json)</li>
+            <li></span>word Documents(.docx, .doc)</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const dropZone = document.getElementById('dropZone');
+        const fileInput = document.getElementById('fileInput');
+        const fileStatus = document.getElementById('fileStatus');
+        const fileInfo = document.getElementById('fileInfo');
+        const submitButton = document.getElementById('submitButton');
+        const uploadForm = document.getElementById('uploadForm');
+        const progressContainer = document.getElementById('progressContainer');
+        const progressBar = document.getElementById('progressBar');
+        const progressText = document.getElementById('progressText');
+        const formatOptions = document.querySelectorAll('.format-option');
+
+        // Format options selection
+        formatOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                formatOptions.forEach(opt => opt.classList.remove('selected'));
+                option.classList.add('selected');
+            });
+        });
+
+        // File drag and drop
+        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+            dropZone.addEventListener(eventName, preventDefaults, false);
+            document.body.addEventListener(eventName, preventDefaults, false);
+        });
+
+        ['dragenter', 'dragover'].forEach(eventName => {
+            dropZone.addEventListener(eventName, highlight, false);
+        });
+
+        ['dragleave', 'drop'].forEach(eventName => {
+            dropZone.addEventListener(eventName, unhighlight, false);
+        });
+
+        dropZone.addEventListener('drop', handleDrop, false);
+
+        // File input change
+        fileInput.addEventListener('change', handleFiles, false);
+
+        // Form submission
+        uploadForm.addEventListener('submit', handleSubmit, false);
+
+        function preventDefaults(e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+
+        function highlight() {
+            dropZone.classList.add('drag-over');
+        }
+
+        function unhighlight() {
+            dropZone.classList.remove('drag-over');
+        }
+
+        function handleDrop(e) {
+            const dt = e.dataTransfer;
+            const files = dt.files;
+            handleFiles({ target: { files: files } });
+        }
+
+        function handleFiles(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const validTypes = ['.pdf', '.doc', '.docx', '.xlsx', '.xls', '.json'];
+                const fileExt = '.' + file.name.split('.').pop().toLowerCase();
+                
+                if (!validTypes.includes(fileExt)) {
+                    showError('Invalid file type. Please select a supported file format.');
+                    fileInput.value = '';
+                    return;
+                }
+
+                if (file.size > 16 * 1024 * 1024) {
+                    showError('File is too large. Maximum size is 16MB.');
+                    fileInput.value = '';
+                    return;
+                }
+
+                fileStatus.style.display = 'none';
+                fileInfo.textContent = `Selected: ${file.name} (${formatSize(file.size)})`;
+                fileInfo.style.display = 'block';
+                submitButton.disabled = false;
+            }
+        }
+
+        function formatSize(bytes) {
+            if (bytes === 0) return '0 Bytes';
+            const k = 1024;
+            const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+        }
+
+        const showDataButton = document.getElementById('showDataButton');
+        const showSummaryButton = document.getElementById('showSummaryButton');
+        const extractedDataSection = document.getElementById('extractedDataSection');
+        const extractedTextSection = document.getElementById('extractedTextSection');
+        const ollamaSummarySection = document.getElementById('ollamaSummarySection');
+        
+        let processedData = null;
+
+        showDataButton.addEventListener('click', showExtractedData);
+        showSummaryButton.addEventListener('click', showOllamaSummary);
+
+        function handleSubmit(e) {
+            e.preventDefault();
+
+            // Reset sections
+            extractedDataSection.style.display = 'none';
+            extractedTextSection.style.display = 'none';
+            ollamaSummarySection.style.display = 'none';
+            
+            // Show progress
+            submitButton.disabled = true;
+            progressContainer.style.display = 'block';
+            progressBar.style.width = '0%';
+            progressText.textContent = 'Uploading file...';
+
+            const formData = new FormData(uploadForm);
+
+            fetch('/upload', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (!response.ok) {
+                    return response.json().then(err => { throw new Error(err.error) });
+                }
+                return response.json();
+            })
+            .then(data => {
+                processedData = data;
+                showSuccess('File processed successfully!');
+                
+                // Enable action buttons
+                showDataButton.disabled = false;
+                showSummaryButton.disabled = false;
+                downloadButton.disabled = false;
+                
+                // Show extracted data by default
+                showExtractedData();
+                resetForm();
+                
+                // Update status message
+                showStatus('Document processed. Ready to view or download results.');
+            })
+            .catch(error => {
+                showError(error.message || 'An error occurred while processing the file.');
+                resetForm();
+            });
+
+            simulateProgress();
+        }
+
+        // Add download button handler
+        const downloadButton = document.getElementById('downloadButton');
+        const statusMessage = document.getElementById('statusMessage');
+        
+        downloadButton.addEventListener('click', handleDownload);
+        
+        async function handleDownload() {
+            if (!processedData) {
+                showError('No data available to download');
+                return;
+            }
+
+            const format = document.querySelector('input[name="output_format"]:checked').value;
+            showStatus('Preparing download...', 'info');
+            downloadButton.disabled = true;
+            
+            try {
+                // Prepare the data to download
+                const downloadData = {
+                    ...processedData,
+                    generated_at: new Date().toISOString()
+                };
+
+                if (ollamaSummarySection.style.display === 'block') {
+                    // Include Ollama summary if it's visible
+                    const summaryTable = document.getElementById('summaryTable');
+                    if (summaryTable.querySelector('table')) {
+                        downloadData.ollama_summary = Array.from(summaryTable.querySelectorAll('tr'))
+                            .slice(1) // Skip header row
+                            .reduce((acc, row) => {
+                                const cells = row.querySelectorAll('td');
+                                if (cells.length === 2) {
+                                    acc[cells[0].textContent] = cells[1].textContent;
+                                }
+                                return acc;
+                            }, {});
+                    }
+                }
+
+                // Use GET request for download
+                const response = await fetch(`/download/${format}`, {
+                    method: 'GET',
+                    headers: {
+                        'Accept': format === 'json' ? 'application/json' : 'text/csv'
+                    }
+                });
+                
+                if (!response.ok) {
+                    const errorData = await response.json();
+                    throw new Error(errorData.error || 'Download failed');
+                }
+                
+                const blob = await response.blob();
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.style.display = 'none';
+                a.href = url;
+                a.download = `result_${new Date().toISOString().slice(0, 19).replace(/[:-]/g, '')}.${format}`;
+                
+                document.body.appendChild(a);
+                a.click();
+                window.URL.revokeObjectURL(url);
+                
+                showStatus('Download complete!', 'success');
+                setTimeout(() => hideStatus(), 3000);
+                
+            } catch (error) {
+                showError(error.message);
+                showStatus('Download failed: ' + error.message, 'error');
+            } finally {
+                downloadButton.disabled = false;
+            }
+        }
+        
+        function showStatus(message, type = 'info') {
+            statusMessage.textContent = message;
+            statusMessage.className = `status-message ${type}`;
+            statusMessage.style.display = 'block';
+        }
+        
+        function hideStatus() {
+            statusMessage.style.display = 'none';
+        }
+        
+        function simulateProgress() {
+            let progress = 0;
+            const interval = setInterval(() => {
+                progress += Math.random() * 30;
+                if (progress > 90) {
+                    clearInterval(interval);
+                    return;
+                }
+                updateProgress(Math.min(progress, 90));
+            }, 500);
+        }
+
+        function updateProgress(percent) {
+            progressBar.style.width = percent + '%';
+            progressText.textContent = 'Processing... ' + Math.round(percent) + '%';
+        }
+
+        function resetForm() {
+            fileInput.value = '';
+            fileStatus.style.display = 'block';
+            fileInfo.style.display = 'none';
+            submitButton.disabled = true;
+            progressContainer.style.display = 'none';
+            progressBar.style.width = '0%';
+        }
+
+        function showError(message) {
+            const alert = document.createElement('div');
+            alert.className = 'alert error';
+            alert.innerHTML = `<span class="alert-icon">!</span>${message}`;
+            insertAlert(alert);
+        }
+
+        function showSuccess(message) {
+            const alert = document.createElement('div');
+            alert.className = 'alert success';
+            alert.innerHTML = `<span class="alert-icon">✓</span>${message}`;
+            insertAlert(alert);
+        }
+
+        function insertAlert(alert) {
+            const container = document.querySelector('.container');
+            const form = document.querySelector('.upload-form');
+            container.insertBefore(alert, form);
+            setTimeout(() => {
+                alert.remove();
+            }, 5000);
+        }
+
+        function showExtractedData() {
+            if (!processedData) return;
+
+            // Show data section
+            extractedDataSection.style.display = 'block';
+            extractedTextSection.style.display = 'block';
+            ollamaSummarySection.style.display = 'none';
+
+            // Display extracted text
+            const extractedText = document.getElementById('extractedText');
+            extractedText.textContent = processedData.text || 'No text extracted';
+
+            // Create data table
+            const dataTable = document.getElementById('dataTable');
+            let tableHTML = '<table class="data-table"><tr><th>Field</th><th>Value</th></tr>';
+
+            if (processedData.structured_data) {
+                const addToTable = (obj, prefix = '') => {
+                    for (const [key, value] of Object.entries(obj)) {
+                        if (typeof value === 'object' && value !== null) {
+                            addToTable(value, prefix + key + '_');
+                        } else {
+                            tableHTML += `<tr><td>${prefix + key}</td><td>${value}</td></tr>`;
+                        }
+                    }
+                };
+
+                addToTable(processedData.structured_data);
+            }
+
+            tableHTML += '</table>';
+            dataTable.innerHTML = tableHTML;
+        }
+
+        async function showOllamaSummary() {
+            if (!processedData || !processedData.text) {
+                showError('No text available to summarize');
+                return;
+            }
+
+            // Show loading state and disable all action buttons
+            showSummaryButton.disabled = true;
+            showDataButton.disabled = true;
+            downloadButton.disabled = true;
+            showSummaryButton.innerHTML = '<div class="spinner"></div>Generating summary...';
+            showStatus('Connecting to Ollama service...', 'info');
+
+            try {
+                const response = await fetch('/summarize', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ 
+                        text: processedData.text.slice(0, 4000) // Limit text length
+                    })
+                });
+
+                if (!response.ok) {
+                    const errorData = await response.json().catch(() => ({}));
+                    throw new Error(errorData.error || 'Failed to connect to Ollama service');
+                }
+
+                const summaryData = await response.json();
+
+                if (summaryData.status === 'error') {
+                    throw new Error(summaryData.message || 'Failed to generate summary');
+                }
+
+                // Show summary section
+                extractedDataSection.style.display = 'none';
+                extractedTextSection.style.display = 'none';
+                ollamaSummarySection.style.display = 'block';
+
+                // Create summary table with header
+                const summaryTable = document.getElementById('summaryTable');
+                let tableHTML = '<table class="data-table"><tr><th>Variable</th><th>Value</th></tr>';
+
+                if (summaryData.summary && typeof summaryData.summary === 'object') {
+                    const entries = Object.entries(summaryData.summary);
+                    
+                    if (entries.length === 0) {
+                        tableHTML += '<tr><td colspan="2">No information could be extracted from the text</td></tr>';
+                    } else {
+                        for (const [key, value] of entries) {
+                            if (value && value !== 'N/A' && value !== 'None') {
+                                tableHTML += `<tr><td>${key}</td><td>${value}</td></tr>`;
+                            }
+                        }
+                    }
+                } else {
+                    tableHTML += '<tr><td colspan="2">Invalid summary format received</td></tr>';
+                }
+
+                if (summaryData.metadata) {
+                    tableHTML += '<tr><td colspan="2" style="background-color: #f5f5f5; font-weight: bold;">Metadata</td></tr>';
+                    for (const [key, value] of Object.entries(summaryData.metadata)) {
+                        tableHTML += `<tr><td>${key}</td><td>${value}</td></tr>`;
+                    }
+                }
+
+                tableHTML += '</table>';
+                summaryTable.innerHTML = tableHTML;
+                showStatus('Summary generated successfully', 'success');
+
+            } catch (error) {
+                let errorMessage;
+                if (error.message.includes('Failed to fetch') || error.message.includes('Failed to connect')) {
+                    errorMessage = 'Ollama service is not available. Please ensure it is running.';
+                } else if (error.message.includes('timeout')) {
+                    errorMessage = 'Ollama request timed out. The service might be busy.';
+                } else {
+                    errorMessage = error.message;
+                }
+                
+                showError(errorMessage);
+                showStatus(errorMessage, 'error');
+                ollamaSummarySection.style.display = 'none';
+                
+                // Log error for debugging
+                console.error('Ollama summary error:', error);
+            } finally {
+                // Re-enable all buttons
+                showSummaryButton.disabled = false;
+                showDataButton.disabled = false;
+                downloadButton.disabled = false;
+                showSummaryButton.innerHTML = 'Show Ollama Summary';
+            }
+        }
+    });
+</script>
+{% endblock %}
