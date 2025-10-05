@@ -1,51 +1,57 @@
 # MENADevsGenAIHackathon
-To run the project, you need to install everything mentioned in the requirements_new.txt file, along with ollama llama3.2:1b and fastapi.
-Place the files in the appropriate structure, then run the app_fastapi.py file.
+To run the project you need to install everything mentioned in the requirements_new.txt file along with ollama llama3.2:1b and fastapi
+place the files in the appropriate structure then run the app_fastapi.py file
 
 http://localhost:8001/
+go to 
+Process Document
+Show Extracted Data
+Show Ollama Summary  try it more than once
+Download Results
 
-Of course, make sure Python and HTML (and any other required system files) are installed.
 
-Technologies used in the project:
+of course make sure Python and HTML and any other required system files are installed
 
-Natural Language Processing (NLP) – Core
-Text Extraction: from PDF, Word:
+Technologies used in the project
+
+Natural Language Processing NLP  core
+text extraction from PDF Word json:
 
 PyPDF2 for PDF files
 
-python-docx for Word files
+python docx for Word files
 
 
-Language Model (LLM) – Ollama
-Using Ollama with the llama3.2:1b model for:
+language model (LLM)  ollama
+using ollama with the llama3.2:1b model for
 
-Document summarization
+document summarization
 
-Key information extraction
+key information extraction
 
-Converting texts into organized key-value pairs
+converting texts into organized key-value pairs
 
-Rule-Based NLP
-Natural language processing using predefined rules instead of relying on large machine learning models:
+rulebased NLP
+natural language processing using predefined rules instead of relying on large machine learning models
 
-Regex-based pattern matching
+Regex       based pattern matching
 
-Document type detection
+document type detection
 
-Field extraction
+field extraction
 
-LLM Integration
+LLM integration
 
-Direct HTTP requests to Ollama
+direct HTTP requests to ollama
 
-Streaming responses
+streaming responses
 
-Simple prompt engineering
+simple prompt engineering
 
-Data Processing:
+Data processing
 
-Normalization of dates and currencies
+normalization of dates and currencies
 
-Redaction of sensitive information
+redaction of sensitive information
 
-File format conversion
+file format conversion
